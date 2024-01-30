@@ -74,6 +74,22 @@ public class Player extends GameObject {
         return this.speed;
     }
 
+    public int getDy() {
+        return this.dy;
+    }
+
+    public int getDx() {
+        return this.dx;
+    }
+
+    public void setDx(int dx) {
+        this.dx = dx;
+    }
+
+    public void setDy(int dy) {
+        this.dy = dy;
+    }
+    
 
 
     //public void applyPowerUp(PlayerDecorator powerUp) {

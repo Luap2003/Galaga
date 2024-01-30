@@ -32,7 +32,8 @@ public class View extends JPanel {
                 } else if (key == KeyEvent.VK_DOWN) {
                     // Move player down
                     model.getPlayer().setDy(model.getPlayer().getSpeed());
-                } if (key == KeyEvent.VK_SPACE) {
+                } 
+                if (key == KeyEvent.VK_SPACE) {
                     // Shoot when space bar is pressed
                     model.addGameObject(model.getPlayer().shoot());
                 }
@@ -42,10 +43,16 @@ public class View extends JPanel {
             public void keyReleased(KeyEvent e) {
                 int key = e.getKeyCode();
 
-                if (key == KeyEvent.VK_RIGHT || key == KeyEvent.VK_LEFT) {
-                    // Stop horizontal movement
+                if (key == KeyEvent.VK_RIGHT && model.getPlayer().getDx() > 0) {
                     model.getPlayer().setDx(0);
-                } else if (key == KeyEvent.VK_UP || key == KeyEvent.VK_DOWN) {
+                }   else if (key == KeyEvent.VK_LEFT && model.getPlayer().getDx() < 0) {
+                    model.getPlayer().setDx(0);
+                } 
+                else if (key == KeyEvent.VK_UP  && model.getPlayer().getDy() < 0) {
+                    // Stop vertical movement
+                        model.getPlayer().setDy(0);
+                }
+                else if (key == KeyEvent.VK_DOWN && model.getPlayer().getDy() > 0) {
                     // Stop vertical movement
                         model.getPlayer().setDy(0);
                 }
