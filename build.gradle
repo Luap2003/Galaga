@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.yourdomain'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Example: JUnit test framework
+    testImplementation 'junit:junit:4.13.2'
+}
+
+// Define how to run your application
+application {
+    mainClassName = 'views.Main'
+}
