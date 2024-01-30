@@ -54,7 +54,7 @@ public class Player extends GameObject {
     public Projectile shoot() {
         // Player shooting logic
         // return new Projectile(...); // Provide necessary parameters
-        return new Projectile(x+width/2, y-11, 0, -2, damage, 2, 10,Color.BLUE);
+        return new Projectile(x+width/2, y-11, 0, -2, damage, 2, 10,Color.BLUE, "player");
         
     }
 

@@ -6,11 +6,13 @@ import java.awt.Color;
 public class Projectile extends GameObject {
     private int damage;
     private Color color;
+    private String type;
 
-    public Projectile(int x, int y, int dx, int dy, int damage, int width, int height, Color color) {
+    public Projectile(int x, int y, int dx, int dy, int damage, int width, int height, Color color, String type) {
         super(x, y, dx, dy, width, height);
         this.damage = damage;
         this.color = color;
+        this.type = type;
         // Initialize projectile attributes
     }   
 
@@ -29,5 +31,9 @@ public class Projectile extends GameObject {
 
     public int getDamage() {
         return this.damage;
+    }
+
+    public String getType() {
+        return this.type;
     }
 }

@@ -87,11 +87,15 @@ public class Model {
                         gameObjects.remove(obj2);
                     }
                     if (obj1 instanceof Enemy && obj2 instanceof Projectile) {
-                        ((Enemy) obj1).getHit(((Projectile) obj2).getDamage());
-                        gameObjects.remove(obj2);
+                        if (((Projectile) obj2).getType().equals("player")) {
+                            ((Enemy) obj1).getHit(((Projectile) obj2).getDamage());
+                            gameObjects.remove(obj2);
+                        }
                     } else if (obj1 instanceof Projectile && obj2 instanceof Enemy) {
-                        ((Enemy) obj2).getHit(((Projectile) obj1).getDamage());
-                        gameObjects.remove(obj1);
+                        if (((Projectile) obj1).getType().equals("player")) {
+                            ((Enemy) obj2).getHit(((Projectile) obj1).getDamage());
+                            gameObjects.remove(obj1);
+                        }
                     }
                     if (obj1 instanceof Asteroid && obj2 instanceof Projectile) {
                         ((Asteroid) obj1).getHit(((Projectile) obj2).getDamage());

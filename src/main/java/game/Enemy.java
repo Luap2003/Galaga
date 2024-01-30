@@ -29,7 +29,7 @@ public class Enemy extends GameObject {
     }
 
     public Projectile shoot() {
-        return new Projectile(x+width/2, y+height+1, 0, 2, damage, 2, 10, Color.RED);
+        return new Projectile(x+width/2, y+height+1, 0, 2, damage, 2, 10, Color.RED, "enemy");
     }
 
     public void tick() {
