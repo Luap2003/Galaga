@@ -28,8 +28,8 @@ public class Player extends GameObject {
     @Override
     public void tick() {
         // Player movement logic
-        x += dx;
-        y += dy;
+        x += dx*speed;
+        y += dy*speed;
 
         if (x <= 0) {
             x = 0;
