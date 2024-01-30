@@ -111,7 +111,7 @@ public class Model {
         if (random.nextInt(200) < 1) {
             int x = random.nextInt(2000); // Random x-coordinate
             int y = 0; // Top of the screen
-            int dx = 1; // Random horizontal speed between -1 and 1
+            int dx = random.nextInt(2) * 2 - 1; // Random horizontal speed between -1 and 1
             int dy = 1; // Random vertical speed between 1 and 3
             int lives = random.nextInt(30) + 1; // Random number of lives between 1 and 3
             Enemy enemy = new Enemy(x, y, dx, dy, 1, lives,100,100 ); // Create new enemy
